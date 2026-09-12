@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body{
+    display:flex;
+    flex-direction:column;
+    background-color: #A8AEB5;
+}
+main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    visibility:hidden;
+    z-index: 1;
+    min-height: 100vh;
+    justify-content: center;
+}
+.start, .victory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:400px;
+    z-index: 10;
+    border:1px solid red;
+    background-color:peachpuff;
+    font-family: "Playfair Display",serif;
+}
+.cards{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.card{
+    background-color: navajowhite;
+    border: 1px solid darkred;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+    aspect-ratio: 1/1.41;
+    cursor: pointer;
+}
+.topSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.topSection>p{
+    max-width: 30%;
+    font-family: "Playfair Display",serif;
+}
+.scorecard{
+    padding: 10px;
+    display: flex;
+    background-image: url('./assets/Blood.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "EB Garamond",serif;
+    color:#4F4F4F;
+    justify-self:end;
+    width: 13%;
+    aspect-ratio: 1.75/1;
+    transform: rotate(4deg);
+}
+main h1{
+    font-family: "EB Garamond", serif;
+}
+footer{
+    font-family: "Playfair Display",serif;
+}
+.start h1{
+    font-family: "Balthazar", serif;
+}
+.cardNum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.cardNumBut{
+    background-color: red;
+    color: white;
+    border:none;
+    padding: 5px 10px;
+}
+.sourceCode, .btn{
+    margin-top: 20px;
+    background:none;
+    border: none;
+    font-family: "Balthazar",serif;
+    font-size: 1.2em;
+    border-radius:9px;
+}
+.sourceCode:hover, .btn:hover{
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, font-size 0.3s;
+    font-size: 1.3em;
+}
+.victory{
+    gap: 20px;
+    padding: 20px;
+    visibility: hidden;
+}
+.loading{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid red;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
